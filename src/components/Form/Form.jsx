@@ -2,8 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Form.css';
 import { useDisable, useURL, useMethod, useBody } from '../../hooks/StateProvider';
+import { useDispatch } from 'react-redux';
 
 const Form = ({ onChange, onSubmit }) => {
+  const dispatch = useDispatch();
+  const [url, setUrl] = useState('');
+  const [method, setMethod] = useState('');
+  const [body, setBody] = useState('');
+  const [disable, setDisable] = useState(false);
+
   const url = useURL();
   const method = useMethod();
   const body = useBody();
