@@ -1,20 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Form.css';
-import { useDisable, useURL, useMethod, useBody } from '../../hooks/StateProvider';
-import { useDispatch } from 'react-redux';
+// import { useDisable, useURL, useMethod, useBody } from '../../hooks/StateProvider';
+// import { useDispatch } from 'react-redux';
+// import { setURL, setMethod, setBody } from '../../actions/restyActions';
+import { getURL, getMethod, getBody, getDisable } from '../../selectors/restySelectors';
 
 const Form = ({ onChange, onSubmit }) => {
-  const dispatch = useDispatch();
-  const [url, setUrl] = useState('');
-  const [method, setMethod] = useState('');
-  const [body, setBody] = useState('');
-  const [disable, setDisable] = useState(false);
+  // const dispatch = useDispatch();
+  // const [url, setUrlLocal] = useState('');
+  // const [method, setMethodLocal] = useState('');
+  // const [body, setBodyLocal] = useState('');
+  // const [disable, setDisableLocal] = useState(false);
 
-  const url = useURL();
-  const method = useMethod();
-  const body = useBody();
-  const disable = useDisable();
+  // const url = useURL();
+  // const method = useMethod();
+  // const body = useBody();
+  // const disable = useDisable();
+
+  const url = getURL();
+  const method = getMethod();
+  const body = getBody();
+  const disable = getDisable();
+
+  // const handleSubmit = () => {
+  //   event.preventDefault();
+
+  //   let requestObject;
+  //   let saveObject;
+
+  //   if(method === 'GET' || method === 'DELETE') {
+  //     dispatch(
+  //       setURL({ url }),
+  //       setMethod({ method }),
+  //       setBody({ body })
+  //       );
+  //     requestObject = { 
+  //       method: method 
+  //     };
+  //     saveObject = {
+  //       url: url,
+  //       method: method,
+  //       body: ''
+  //     };
+  //   } else {
+  //     requestObject = { 
+  //       method: method,
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: body
+  //     };
+  //     saveObject = {
+  //       url: url,
+  //       method: method,
+  //       body: body
+  //     };
+  //   }
 
   return (
     <div className={styles.Form}>
