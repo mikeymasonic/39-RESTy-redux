@@ -1,4 +1,4 @@
-import { SET_URL, SET_METHOD, SET_BODY, SET_REQUESTS } from '../actions/restyActions';
+import { SET_URL, SET_METHOD, SET_BODY, SET_REQUESTS, SET_DISABLE, SET_RESPONSE } from '../actions/restyActions';
 
 export default function reducer(state, action) {
   switch(action.type) {
@@ -9,6 +9,10 @@ export default function reducer(state, action) {
     case SET_BODY:
       return { ...state, method: action.payload };
     case SET_REQUESTS:
+      return { ...state, method: action.payload };
+    case SET_DISABLE:
+      return { ...state, method: action.payload };
+    case SET_RESPONSE:
       return { ...state, method: action.payload };
   }
 }
