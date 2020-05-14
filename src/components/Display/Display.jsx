@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactJson from 'react-json-view';
 import styles from './Display.css';
-import { useResponse, useHeaders } from '../../hooks/StateProvider';
+// import { useResponse, useHeaders } from '../../hooks/StateProvider';
+import { getResponse, getHeaders } from '../../selectors/restySelectors';
 
 const Display = () => {
-  const response = useResponse();
-  const headers = useHeaders();
+  const response = getResponse();
+  const headers = getHeaders();
 
   return (
     <div className={styles.Display}>
