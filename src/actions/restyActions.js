@@ -66,24 +66,13 @@ export const setResponse = () => dispatch => {
     });
 };
 
-// export function reducer(state, action) {
-//   switch(action.type) {
-//     case 'SET_URL':
-//       return { ...state, url: action.payload };
-//     case 'SET_METHOD':
-//       return { ...state, method: action.payload };
-//     case 'SET_BODY':
-//       return { ...state, body: action.payload };
-//     case 'SET_REQUESTS':
-//       return { ...state, requests: action.payload };
-//     case 'SET_DISABLE':
-//       return { ...state, disable: action.payload };
-//     case 'SET_RESPONSE':
-//       return { ...state, response: action.payload };
-//     case 'SET_HEADERS':
-//       return { ...state, headers: action.payload };
-    
-//     default:
-//       return state;
-//   }
-// }
+export const SET_HEADERS = 'SET_HEADERS';
+export const setHeaders = () => dispatch => {
+  return fetchResponse()
+    .then(headers => {
+      dispatch({
+        type: SET_HEADERS,
+        payload: headers
+      });
+    });
+};
