@@ -8,18 +8,6 @@ export const getRequests = state => state.requests;
 
 export const getDisable = state => state.disable;
 
+export const getResponse = state => state.response;
 
-// case 'SET_URL':
-//   return { ...state, url: action.payload };
-// case 'SET_METHOD':
-//   return { ...state, method: action.payload };
-// case 'SET_BODY':
-//   return { ...state, body: action.payload };
-// case 'SET_REQUESTS':
-//   return { ...state, requests: action.payload };
-// case 'SET_DISABLE':
-//   return { ...state, disable: action.payload };
-// case 'SET_RESPONSE':
-//   return { ...state, response: action.payload };
-// case 'SET_HEADERS':
-//   return { ...state, headers: action.payload };
+export const getHeaders = state => state.headers;
