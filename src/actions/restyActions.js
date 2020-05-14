@@ -44,6 +44,27 @@ export const setRequests = () => dispatch => {
     });
 };
 
+export const SET_DISABLE = 'SET_DISABLE';
+export const setDisable = () => dispatch => {
+  return fetchResponse()
+    .then(disable => {
+      dispatch({
+        type: SET_DISABLE,
+        payload: disable
+      });
+    });
+};
+
+export const SET_RESPONSE = 'SET_RESPONSE';
+export const setResponse = () => dispatch => {
+  return fetchResponse()
+    .then(response => {
+      dispatch({
+        type: SET_RESPONSE,
+        payload: response
+      });
+    });
+};
 
 // export function reducer(state, action) {
 //   switch(action.type) {
