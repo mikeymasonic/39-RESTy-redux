@@ -1,6 +1,16 @@
 import { SET_URL, SET_METHOD, SET_BODY, SET_REQUESTS, SET_DISABLE, SET_RESPONSE, SET_HEADERS } from '../actions/restyActions';
 
-export default function reducer(state, action) {
+const initialState = {
+  url: '',
+  method: 'GET',
+  body: '',
+  disable: true,
+  headers: {},
+  response: {},
+  requests: []
+};
+
+export default function reducer(state = initialState, action) {
   switch(action.type) {
     case SET_URL:
       return { ...state, url: action.payload };
