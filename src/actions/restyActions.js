@@ -22,6 +22,27 @@ export const setMethod = () => dispatch => {
     });
 };
 
+export const SET_BODY = 'SET_BODY';
+export const setBody = () => dispatch => {
+  return fetchResponse()
+    .then(body => {
+      dispatch({
+        type: SET_BODY,
+        payload: body
+      });
+    });
+};
+
+export const SET_REQUESTS = 'SET_REQUESTS';
+export const setRequests = () => dispatch => {
+  return fetchResponse()
+    .then(requests => {
+      dispatch({
+        type: SET_REQUESTS,
+        payload: requests
+      });
+    });
+};
 
 
 // export function reducer(state, action) {
