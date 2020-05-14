@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './List.css';
-import { useRequests } from '../../hooks/StateProvider';
+import { getRequests } from '../../selectors/restySelectors';
+import { useSelector } from 'react-redux';
 
 const List = ({ handleClear, handleLoad }) => {
-  const requests = useRequests();
+  const requests = useSelector(getRequests);
   const requestNodes = requests.map(request => {
     const home = request.url.split('/')[2];
     const user = request.url.split('.com')[1];
