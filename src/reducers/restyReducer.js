@@ -7,15 +7,15 @@ export default function reducer(state, action) {
     case SET_METHOD:
       return { ...state, method: action.payload };
     case SET_BODY:
-      return { ...state, method: action.payload };
+      return { ...state, body: action.payload };
     case SET_REQUESTS:
-      return { ...state, method: action.payload };
+      return { ...state, requests: action.payload };
     case SET_DISABLE:
-      return { ...state, method: action.payload };
+      return { ...state, disable: action.payload };
     case SET_RESPONSE:
-      return { ...state, method: action.payload };
+      return { ...state, response: action.payload };
     case SET_HEADERS:
-      return { ...state, method: action.payload };
+      return { ...state, headers: action.payload };
     default:
       return state;
   }
