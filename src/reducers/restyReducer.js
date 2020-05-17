@@ -1,7 +1,7 @@
 import { SET_URL, SET_METHOD, SET_BODY, SET_REQUESTS, SET_DISABLE, SET_RESPONSE, SET_HEADERS } from '../actions/restyActions';
 
 const initialState = {
-  url: '',
+  url: 'https://api.github.com/users/mikeymasonic',
   method: 'GET',
   body: '',
   disable: true,
